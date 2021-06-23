@@ -21,5 +21,5 @@
 <p align="center"><strong>Name</strong><strong>:</strong> Shadmanul Islam</p>
 <p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1822132642</p>
 <p align="center"><strong>Email</strong><strong>:</strong> <a href="mailto:shadmanul.islam@northsouth.edu">shadmanul.islam@northsouth.edu</a></p>
-<p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/WasekRahman/SU19CSE299S16G07NSU/">https://github.com/WasekRahman/SU19CSE299S16G07NSU/</a></p>
+<p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-SU21-CSE299-6/Group01.git/">https://github.com/NSU-SU21-CSE299-6/Group01.git/</a></p>
 <p align="center"><strong>Date Prepared</strong><strong>: </strong>TBA</p>
