@@ -11,15 +11,15 @@
 <p align="center"><strong>Faculty</strong>: Shaikh Shawon Arefin Shimon (Sas3)</p>
 <p align="center"><strong><u>Member 1</u></strong><u>:</u></p>
 <p align="center"><strong>Name</strong><strong>:</strong> MD Shafin Islam Rudro</p>
-<p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1821054642</p>
+<p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1821054</p>
 <p align="center"><strong>Email</strong><strong>:</strong> <a href="mailto:shafin.rudro@northsouth.edu">shafin.rudro@northsouth.edu</a></p>
 <p align="center"><strong><u>Member 2</u></strong><strong><u>:</u></strong></p>
 <p align="center"><strong>Name</strong><strong>:</strong> Sadia Aktar</p>
-<p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1821516042</p>
+<p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1821516</p>
 <p align="center"><strong>Email</strong><strong>:</strong> <a href="mailto:akter.sadia@northsouth.edu">akter.sadia@northsouth.edu</a></p>
 <p align="center"><strong><u>Member 3</u></strong><strong><u>:</u></strong></p>
 <p align="center"><strong>Name</strong><strong>:</strong> Shadmanul Islam</p>
-<p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1822132642</p>
+<p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1822132</p>
 <p align="center"><strong>Email</strong><strong>:</strong> <a href="mailto:shadmanul.islam@northsouth.edu">shadmanul.islam@northsouth.edu</a></p>
 <p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-SU21-CSE299-6/Group01.git/">https://github.com/NSU-SU21-CSE299-6/Group01.git/</a></p>
 <p align="center"><strong>Date Prepared</strong><strong>: </strong>27/06/2021</p>
