@@ -25,6 +25,7 @@
 <p align="center"><strong>Date Prepared</strong><strong>: </strong>27/06/2021</p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
+<div align="justify">
 <p><strong>Introduction</strong></p>
 <p>Physical stores have a lot of restrictions. Fixed business hours, stock limitation, limited clients, excessive bills are just a few of them. On top of that, in special times like this, when the whole world is quarantined, the physical shop owners are suffering the most. Having a place where store owners can continue their business uninterrupted and more efficiently is now a hot demand.</p>
 <p>This project aims to create an E-commerce website on tech and gadgets to give the tech shop owners a secure platform to sell their products, even in the absence of a physical store. This website will provide better deployment of the shop's products, accessibility, global customers, effortless track of buyer's preferences, and 24x7 selling opportunity. So that all the business problems are solved with just a click.</p>
@@ -58,3 +59,4 @@
 <p><strong>Social Impacts:</strong></p>
 <p>The goal of this website is to make shopping easier and in the palm of the user’s hand. Nowadays people of all ages are used to the modern technologies that can connect them to the internet.  And it's on the internet, where the modern era of shopping is making its mark. Everything from a hairpin to a helicopter can be purchased online these days. Products are put into the websites by sellers to be browsed or bought by customers, and the convenience of the e-commerce trend also benefits both buyers and sellers alike. Our website aims to serve as the bridge that connects the buyers and sellers to ensure fair trade.</p>
 <p>&nbsp;</p>
+</div>
