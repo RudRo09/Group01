@@ -47,7 +47,6 @@
   <li>Website security measures to prevent hacking attempts.</li>
 </ul>
 <p><strong>Technology</strong></p>
-<p>&nbsp;</p>
 <p><em>Front-end:</em></p>
 <p>Like any other website, we will be using HTML for the structure and content of our website. Then we will apply CSS and Bootstrap to it, for styling and formatting the website. We will also use some JavaScript for the client-side interface. Our website will have a responsive web design.</p>
 <p><em>Backend:</em></p>
