@@ -44,5 +44,18 @@
     <li>Average rating and review count calculation.</li>
   </ul>
   <li>Multiple payment options flexibility.</li>
-  <li>Website security measures to prevent hacking attempts</li>
+  <li>Website security measures to prevent hacking attempts.</li>
 </ul>
+<p><strong>Technology</strong></p>
+<p>&nbsp;</p>
+<p><em>Front-end:</em></p>
+<p>Like any other website, we will be using HTML for the structure and content of our website. Then we will apply CSS and Bootstrap to it, for styling and formatting the website. We will also use some JavaScript for the client-side interface. Our website will have a responsive web design.</p>
+<p><em>Backend:</em></p>
+<p>For the backend of our website, we are using Python-based web framework Django. In the backend, we will expose a bunch of services that will be accessible via the HTTP protocol. The client/front-end then can directly call the services by sending HTTP requests.</p>
+<p><em>Database:</em></p>
+<p>In the beta version of our project, we are going to use the SQLite database in the development server. In the final version, we will migrate to PostgreSQL DB.</p>
+<p><em>Payment Method:</em></p>
+<p>For the payment method we will be using SSLCOMMERZ, which is a secure and authorized online Payment Gateway. It enables to perform secured transactions from the customer’s card, mobile wallet or bank account. But if we face any issue implementing it properly in our project, we plan to use Stripe Python library as an alternative approach. It is also a technology to accept payments online and build economic infrastructure for the internet.</p>
+<p><strong>Social Impacts:</strong></p>
+<p>The goal of this website is to make shopping easier and in the palm of the user’s hand. Nowadays people of all ages are used to the modern technologies that can connect them to the internet.  And it's on the internet, where the modern era of shopping is making its mark. Everything from a hairpin to a helicopter can be purchased online these days. Products are put into the websites by sellers to be browsed or bought by customers, and the convenience of the e-commerce trend also benefits both buyers and sellers alike. Our website aims to serve as the bridge that connects the buyers and sellers to ensure fair trade.</p>
+<p>&nbsp;</p>
