@@ -28,3 +28,21 @@
 <p><strong>Introduction</strong></p>
 <p>Physical stores have a lot of restrictions. Fixed business hours, stock limitation, limited clients, excessive bills are just a few of them. On top of that, in special times like this, when the whole world is quarantined, the physical shop owners are suffering the most. Having a place where store owners can continue their business uninterrupted and more efficiently is now a hot demand.</p>
 <p>This project aims to create an E-commerce website on tech and gadgets to give the tech shop owners a secure platform to sell their products, even in the absence of a physical store. This website will provide better deployment of the shop's products, accessibility, global customers, effortless track of buyer's preferences, and 24x7 selling opportunity. So that all the business problems are solved with just a click.</p>
+<p><strong>Features</strong></p>
+<ul>
+  <li>Authentication based login-logout system.</li>
+  <li>Token based verification and message alerts.</li>
+  <li>Forgot password with secure validation link.</li>
+  <li>Category based product browsing and pagination.</li>
+  <li>Search option to search for products easily.</li>
+  <li>Product gallery with unlimited images.</li>
+  <li>Add to cart and after order functionalities with easy-to-understand UI.</li>
+  <li>Unique order and order number generation.</li>
+  <li>Interactive review and rating system.</li>
+  <ul>
+    <li>Two factor checks for submitting reviews (Login check & product purchase check)</li>
+    <li>Average rating and review count calculation.</li>
+  </ul>
+  <li>Multiple payment options flexibility.</li>
+  <li>Website security measures to prevent hacking attempts</li>
+</ul>
