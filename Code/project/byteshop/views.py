@@ -22,3 +22,7 @@ def store(request, category_slug=None):
 	}
 
 	return render(request, 'byteshop/store.html', context)
+
+
+def product_detail(request, category_slug, product_slug):
+	return render(request, 'byteshop/product_detail.html')

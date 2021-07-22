@@ -29,12 +29,10 @@
               <div class="card-body">
 
                 <ul class="list-menu">
-                  <li><a href="#">Desktop</a></li>
-                  <li><a href="#">Laptop</a></li>
-                  <li><a href="#">Component</a></li>
-                  <li><a href="#">Monitor</a></li>
-                  <li><a href="#">UPS</a></li>
-                  <li><a href="#">Tablet</a></li>
+                  <li><a href="{% url 'store' %}">All Products</a></li>
+                  {% for category in links %}
+                  <li><a href="{{ category.get_url }}">{{ category.category_name }}</a></li>
+                  {% endfor %}
                 </ul>
 
               </div> <!-- card-body.// -->
