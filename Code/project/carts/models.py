@@ -18,5 +18,11 @@ class CartItem(models.Model):
 	is_active = models.BooleanField(default=True)
 
 
+	class Meta:
+		verbose_name = 'Cart items'
+		verbose_name_plural = 'Cart Items'
+
+
+
 	def __str__(self):
 		return self.product
