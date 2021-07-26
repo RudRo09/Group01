@@ -1,5 +1,5 @@
 from django.db import models
-from byteshop.mode ls import Product
+from byteshop.models import Product
 
 # Create your models here.
 class Cart(models.Model):
