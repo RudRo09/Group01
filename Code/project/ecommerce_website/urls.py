@@ -25,7 +25,10 @@ urlpatterns = [
     path('', views.home, name='home'),
 
     # routing to store url
-    path('store/', include('byteshop.urls') )
+    path('store/', include('byteshop.urls') ),
+
+    # routing to carts url
+    path('cart/', include('carts.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
