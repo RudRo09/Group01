@@ -29,6 +29,9 @@ urlpatterns = [
 
     # routing to carts url
     path('cart/', include('carts.urls')),
+
+    # rounting to accounts url
+    path('accounts/', include('accounts.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
