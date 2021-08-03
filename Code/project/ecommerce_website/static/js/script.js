@@ -58,3 +58,7 @@ $(document).ready(function() {
 }); 
 // jquery end
 
+// automatically fading out registration successful message
+setTimeout(function(){
+    $('#message').fadeOut('slow')
+}, 2000)
