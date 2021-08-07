@@ -3,6 +3,7 @@ from .forms import RegistrationForm
 from .models import Account
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 
 # verification imports
 from django.contrib.sites.shortcuts import get_current_site
@@ -41,10 +42,10 @@ def register(request):
 				})
 			email_to = email
 			send_email = EmailMessage(mail_subject, message, to=[email_to])
-			send.email.send()
+			send_email.send()
 
-			messages.success(request, 'Registration Successful!')
-			return redirect('register')
+		# messages.info(request, 'Account Verification Mail Sent!')
+			return redirect('/accounts/login/?command=verification&email='+email)
 
 	else:
 		form = RegistrationForm()
@@ -81,5 +82,20 @@ def logout(request):
 	return redirect('login')
 
 
-def activate(request):
-	pass
+def activate(request, uidb64, token):
+	try:
+		uid = urlsafe_base64_decode(uidb64).decode()
+		user = Account._default_manager.get(pk=uid)
+
+	except(TypeError, ValueError, OverflowError, Account.DoesNotExist):
+		user = None
+
+	if user and default_token_generator.check_token(user, token):
+		user.is_active = True
+		user.save()
+		messages.success(request, 'Account is Activated!')
+		return redirect('login')
+
+	else:
+		messages.error(request, 'Invalid Activation Link!')
+		return redirect('register') 
