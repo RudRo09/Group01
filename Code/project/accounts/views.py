@@ -102,4 +102,4 @@ def activate(request, uidb64, token):
 
 @login_required(login_url='login')
 def dashboard(request):
-	return HttpResponse('working!')
+	return render(request, 'accounts/dashboard.html')
