@@ -34,7 +34,7 @@ def register(request):
 			# user activation
 			current_site = get_current_site(request)
 			mail_subject = 'Account Activation Link'
-			message = render_to_string('accounts/verfication_email.html', {
+			message = render_to_string('accounts/verification_email.html', {
 				'user': user,
 				'domain': current_site,
 				'uid': urlsafe_base64_encode(force_bytes(user.pk)),			# encoding primary key
@@ -63,11 +63,10 @@ def login(request):
 
 		user = auth.authenticate(email=email, password=password)
 
-		if user is not None:
+		if user:
 			auth.login(request, user)
-			# messages.success(request, 'Log in Successful!')
-			return redirect('home')
-
+			messages.success(request, 'Log in Successful!')
+			return redirect('dashboard')
 		else:
 			messages.error(request, 'The email and password you entered did not match our records. Please double-check and try again!')
 			return redirect('login')
@@ -75,7 +74,7 @@ def login(request):
 	return render(request, 'accounts/login.html')
 
 
-@login_required(login_url = 'login')
+@login_required(login_url='login')
 def logout(request):
 	auth.logout(request)
 	messages.success(request, 'Logged Out!')
@@ -98,4 +97,9 @@ def activate(request, uidb64, token):
 
 	else:
 		messages.error(request, 'Invalid Activation Link!')
-		return redirect('register') 
+		return redirect('register')
+
+
+@login_required(login_url='login')
+def dashboard(request):
+	return HttpResponse('working!')
