@@ -4,6 +4,8 @@ from .models import Account
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from carts.models import Cart, CartItem
+from carts.views import _cart_id
 
 # verification imports
 from django.contrib.sites.shortcuts import get_current_site
@@ -64,6 +66,18 @@ def login(request):
 		user = auth.authenticate(email=email, password=password)
 
 		if user:
+			try:
+				cart = Cart.objects.get(cart_id=_cart_id(request))
+				cart_item_exists = CartItem.objects.filter(cart=cart).exists()
+				if cart_item_exists:
+					cart_item = CartItem.objects.filter(cart=cart)
+
+					for item in cart_item:
+						item.user = user
+						item.save()
+			except:
+				pass
+
 			auth.login(request, user)
 			messages.success(request, 'Log in Successful!')
 			return redirect('dashboard')

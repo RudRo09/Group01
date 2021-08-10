@@ -3,6 +3,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from byteshop.models import Product
 from .models import Cart, CartItem
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 def _cart_id(request):						# private funtion
 	cart = request.session.session_key
@@ -67,9 +68,7 @@ def remove_cart_item(request, product_id):
 	return redirect('cart')
 
 
-
 def cart(request, total=0, quantity=0, cart_items=None):
-
 	try:
 		cart = Cart.objects.get(cart_id=_cart_id(request))
 		cart_items = CartItem.objects.filter(cart=cart, is_active=True)
@@ -89,6 +88,7 @@ def cart(request, total=0, quantity=0, cart_items=None):
 	return render(request, 'byteshop/cart.html', context)
 
 
+@login_required(login_url='login')
 def checkout(request, total=0, quantity=0, cart_items=None):
 	try:
 		cart = Cart.objects.get(cart_id=_cart_id(request))
