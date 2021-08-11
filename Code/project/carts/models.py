@@ -1,5 +1,6 @@
 from django.db import models
 from byteshop.models import Product
+from accounts.models import Account
 
 # Create your models here.
 class Cart(models.Model):
@@ -12,10 +13,15 @@ class Cart(models.Model):
 
 
 class CartItem(models.Model):
+	user = models.ForeignKey(Account, on_delete=models.CASCADE, null=True)
 	product = models.ForeignKey(Product, on_delete=models.CASCADE)
-	cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+	cart = models.ForeignKey(Cart, on_delete=models.CASCADE, null=True)
 	quantity = models.IntegerField()
 	is_active = models.BooleanField(default=True)
+
+
+	def __str__(self):
+			return self.product.product_name
 
 
 	def sub_total(self):
@@ -25,8 +31,3 @@ class CartItem(models.Model):
 	class Meta:
 		verbose_name = 'Cart items'
 		verbose_name_plural = 'Cart Items'
-
-
-
-	def __str__(self):
-		return self.product
