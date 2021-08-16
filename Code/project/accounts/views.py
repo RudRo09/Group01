@@ -65,7 +65,7 @@ def login(request):
 
 		user = auth.authenticate(email=email, password=password)
 
-		if user:
+		if user is not None:
 			try:
 				cart = Cart.objects.get(cart_id=_cart_id(request))
 				cart_item_exists = CartItem.objects.filter(cart=cart).exists()

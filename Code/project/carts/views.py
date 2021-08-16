@@ -16,7 +16,6 @@ def _cart_id(request):						# private funtion
 # Create your views here.
 def add_cart(request, product_id):
 	product = Product.objects.get(id=product_id)
-
 	try:
 		cart = Cart.objects.get(cart_id=_cart_id(request))
 
@@ -45,23 +44,36 @@ def add_cart(request, product_id):
 
 
 def remove_cart(request, product_id):
-	cart = Cart.objects.get(cart_id=_cart_id(request))
 	product = get_object_or_404(Product, id=product_id)
-	cart_item = CartItem.objects.get(product=product, cart=cart)
 
-	if cart_item.quantity > 1:
-		cart_item.quantity -= 1
-		cart_item.save()
-	else:
-		cart_item.delete()
+	try:
+		if request.user.is_authenticated:
+			cart_item = CartItem.objects.get(product=product, user=request.user)
+
+		else:
+			cart = Cart.objects.get(cart_id=_cart_id(request))
+			cart_item = CartItem.objects.get(product=product, cart=cart)
+
+		if cart_item.quantity > 1:
+			cart_item.quantity -= 1
+			cart_item.save()
+		else:
+			cart_item.delete()
+	
+	except:
+		pass
 
 	return redirect('cart')
 
 
 def remove_cart_item(request, product_id):
-	cart = Cart.objects.get(cart_id=_cart_id(request))
 	product = get_object_or_404(Product, id=product_id)
-	cart_item = CartItem.objects.get(product=product, cart=cart)
+	if request.user.is_authenticated:
+		cart_item = CartItem.objects.get(product=product, user=request.user)
+
+	else:
+		cart = Cart.objects.get(cart_id=_cart_id(request))
+		cart_item = CartItem.objects.get(product=product, cart=cart)
 
 	cart_item.delete()
 
