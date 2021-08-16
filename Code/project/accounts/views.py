@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from carts.models import Cart, CartItem
 from carts.views import _cart_id
+import requests
 
 # verification imports
 from django.contrib.sites.shortcuts import get_current_site
@@ -65,7 +66,7 @@ def login(request):
 
 		user = auth.authenticate(email=email, password=password)
 
-		if user:
+		if user is not None:
 			try:
 				cart = Cart.objects.get(cart_id=_cart_id(request))
 				cart_item_exists = CartItem.objects.filter(cart=cart).exists()
@@ -80,7 +81,20 @@ def login(request):
 
 			auth.login(request, user)
 			messages.success(request, 'Log in Successful!')
-			return redirect('dashboard')
+			url = request.META.get('HTTP_REFERER')
+			try:
+				query = requests.utils.urlparse(url).query
+				# print('query --->', query)
+				# print('-------------------')
+				# the query is 'next/cart/checkout/'
+				params = dict(x.split('=') for x in query.split('&'))
+				# print('params-->', params)
+				if 'next' in params:
+					nextPage = params['next']
+					return redirect(nextPage)
+			except:
+				return redirect('dashboard')
+
 		else:
 			messages.error(request, 'The email and password you entered did not match our records. Please double-check and try again!')
 			return redirect('login')
