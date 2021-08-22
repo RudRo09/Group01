@@ -33,6 +33,7 @@ class Order(models.Model):
 	city = models.CharField(max_length=100)
 	area = models.CharField(max_length=100, blank=True)
 	order_note = models.CharField(max_length=100, blank=True)
+	order_total = models.FloatField()
 	status = models.CharField(max_length=10, choices=STATUS, default='New')
 	ip_address = models.CharField(blank=True, max_length=20)
 	is_ordered = models.BooleanField(default=False)
@@ -41,4 +42,4 @@ class Order(models.Model):
 
 
 	def __str__(self):
-		return self.user.first_name
+		return self.first_name
