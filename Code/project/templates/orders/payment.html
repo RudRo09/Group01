@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="section-content padding-y">
+
+  <!-- ============================ COMPONENT PAYMENT   ================================= -->
+  <div class="card-body">
+    <h4 class="card-title mb-4">Enter confirmation code: </h4>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Confirmation Code" name="">
+        <button type="submit" class="btn btn-primary "> Submit</button>
+      </div> <!-- form-group// -->
+
+{% endblock %}
