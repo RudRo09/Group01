@@ -20,10 +20,20 @@ def add_cart(request, product_id):
 
 	# user is logged in
 	if current_user.is_authenticated:
-		cart_item_exists = CartItem.objects.filter(product=product, user=current_user).exists()
+		try:
+			cart = Cart.objects.get(cart_id=_cart_id(request))
+
+		except Cart.DoesNotExist:
+			cart = Cart.objects.create(
+				cart_id = _cart_id(request)
+				)
+
+		cart.save()
+
+		cart_item_exists = CartItem.objects.filter(product=product, user=current_user, cart=cart).exists()
 
 		if cart_item_exists:
-			cart_item = CartItem.objects.get(product=product, user=current_user)
+			cart_item = CartItem.objects.get(product=product, user=current_user, cart=cart)
 			cart_item.quantity += 1
 			cart_item.save()
 
@@ -32,6 +42,7 @@ def add_cart(request, product_id):
 					product = product,
 					quantity = 1,
 					user = current_user,
+					cart = cart
 				)
 
 			cart_item.save()
@@ -123,25 +134,26 @@ def remove_cart_item(request, product_id):
 
 def cart(request, total=0, quantity=0, cart_items=None):
 	try:
-		print('ENTERED TRY BLOCK')
-		print('')
+		# print('ENTERED TRY BLOCK')
+		# print('')
 		if request.user.is_authenticated:
 			cart_items = CartItem.objects.filter(user=request.user, is_active=True)
-			print('ENTERED IF BLOCK')
-			print('')
+			# print('ENTERED IF BLOCK')
+			# print('')
 		else:
-			print('ENTERED ELSE BLOCK')
-			print('')
+			# print('ENTERED ELSE BLOCK')
+			# print('')
 			cart = Cart.objects.get(cart_id=_cart_id(request))
 			cart_items = CartItem.objects.filter(cart=cart, is_active=True)
 
 		for cart_item in cart_items:
-			print('ENTERED FOR LOOP')
+			# print('ENTERED FOR LOOP')
 			total += (cart_item.product.price * cart_item.quantity)
 			quantity += cart_item.quantity
 
 	except ObjectDoesNotExist:
-		print('ENTERED EXCEPT BlOCK')
+		pass
+		# print('ENTERED EXCEPT BlOCK')
 
 	context = {
 		'total': total,
