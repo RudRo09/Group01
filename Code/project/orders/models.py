@@ -1,11 +1,10 @@
 from django.db import models
 from accounts.models import Account
 
-
 # Create your models here.
 class Payment(models.Model):
 	user = models.ForeignKey(Account, on_delete=models.CASCADE)
-	payment_id = models.CharField(max_length=11)
+	payment_id = models.CharField(max_length=100)
 	amount_paid = models.CharField(max_length=100)
 	status = models.CharField(max_length=100)
 	crated_at = models.DateTimeField(auto_now_add=True)
@@ -13,6 +12,7 @@ class Payment(models.Model):
 
 	def __str__(self):
 		return self.payment_id
+
 
 class Order(models.Model):
 	STATUS = (
@@ -39,7 +39,6 @@ class Order(models.Model):
 	is_ordered = models.BooleanField(default=False)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
-
 
 	def __str__(self):
 		return self.first_name
