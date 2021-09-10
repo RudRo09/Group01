@@ -33,7 +33,7 @@ urlpatterns = [
     # rounting to accounts url
     path('accounts/', include('accounts.urls')),
 
-     # routing to orders url
+    # routing to orders url
     path('orders/', include('orders.urls')),
 ]
 
