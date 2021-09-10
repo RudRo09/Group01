@@ -93,11 +93,12 @@ def confirm_order(request):
 		if form.is_valid():
 			try:
 				data = form.cleaned_data['payment_id']
+				print(data)
 				order = Order.objects.get(user=current_user, payment_id=data)
 				# order.payment = data
 				order.is_ordered = True
 				order.save()
-				print(order.id)
+				print(order.order_number)
 
 				# move cart items to Order Product table
 				cart_items = CartItem.objects.filter(user=current_user)
@@ -123,7 +124,17 @@ def confirm_order(request):
 
 				# send order confirmation mail
 
-				return render(request, 'orders/success.html')
+				# context
+				ordered_products = OrderProduct.objects.filter(order_id=order.id)
+
+				context = {
+					'order': order,
+					'ordered_products': ordered_products,
+					'order_number': order.order_number,
+					'payment_id': data,
+				}
+
+				return render(request, 'orders/order_complete.html', context)
 
 			except:			
 				messages.error(request, 'Wrong Code!')
@@ -134,6 +145,13 @@ def confirm_order(request):
 			# messages.success(request, 'Wrong Code!')
 			# return render(request, 'orders/confirm_order.html')
 			return render(request, 'orders/success.html')
+
+
+def order_complete(request):
+	return render(request, 'orders/order_complete.html')
+
+
+
 
 
 def random_num():
