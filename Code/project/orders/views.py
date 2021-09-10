@@ -2,11 +2,13 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from carts.models import CartItem
 from .forms import OrderForm, PaymentForm
-from .models import Order, Payment
+from .models import Order, Payment, OrderProduct
+from byteshop.models import Product
 from django.contrib import messages
 
 import datetime
 import random
+import json
 
 
 # Create your views here.
@@ -64,6 +66,7 @@ def place_order(request, total=0, quantity=0):
 
 			payment_data = Payment()
 			payment_data.user = current_user
+			payment_data.amount_paid = total
 			payment_data.save()
 			payment_data.payment_id = random_num() + str('-') + str(payment_data.id)
 			payment_data.save()
@@ -81,6 +84,8 @@ def confirm_payment(request):
 	return render (request, 'orders/confirm_payment.html')
 
 def confirm_order(request):
+	# body = json.loads(request.body)
+	# print(body)
 	current_user = request.user
 	# order = Order.objects.get(user=request.user)
 	if request.method == 'POST':
@@ -89,18 +94,46 @@ def confirm_order(request):
 			try:
 				data = form.cleaned_data['payment_id']
 				order = Order.objects.get(user=current_user, payment_id=data)
+				# order.payment = data
+				order.is_ordered = True
+				order.save()
+				print(order.id)
+
+				# move cart items to Order Product table
+				cart_items = CartItem.objects.filter(user=current_user)
+				print(cart_items)
+				for item in cart_items:
+					orderproduct = OrderProduct()
+					orderproduct.user_id = request.user.id
+					orderproduct.order_id = order.id
+					orderproduct.product_id = item.product_id
+					orderproduct.quantity = item.quantity
+					orderproduct.product_price = item.product.price
+					orderproduct.ordered = True
+					orderproduct.save()
+					# orderproduct.payment = payment
+
+					# reduce quantity of product from stock
+					product = Product.objects.get(id=item.product_id)
+					product.stock -= item.quantity
+					product.save()
+
+				# clear the cart
+				CartItem.objects.filter(user=current_user).delete()
+
+				# send order confirmation mail
+
 				return render(request, 'orders/success.html')
 
 			except:			
 				messages.error(request, 'Wrong Code!')
 				return redirect('confirm_payment')
 
-
-		# else:
-		# 	# print('Form is invalid')
-		# 	# messages.success(request, 'Wrong Code!')
-		# 	# return render(request, 'orders/confirm_order.html')
-		# 	return render(request, 'orders/success.html')
+		else:
+			print('Form is invalid')
+			# messages.success(request, 'Wrong Code!')
+			# return render(request, 'orders/confirm_order.html')
+			return render(request, 'orders/success.html')
 
 
 def random_num():
