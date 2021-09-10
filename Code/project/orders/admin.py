@@ -4,4 +4,4 @@ from .models import Payment, Order
 # Register your models here.
 admin.site.register(Payment)
 admin.site.register(Order)
-# admin.site.register(OrderProduct)
+admin.site.register(OrderProduct)
