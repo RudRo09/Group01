@@ -52,10 +52,14 @@ def product_detail(request, category_slug, product_slug):
 			product_id=single_product.id).exists()
 	except OrderProduct.DoesNotExist:
 		orderproduct = None
+
+	# getting reviews
+	reviews = ReviewRating.objects.filter(product_id=single_product.id, status=True)
 	context = {
 		'single_product': single_product,
 		'in_cart': in_cart,
 		'orderproduct': orderproduct,
+		'reviews': reviews,
 	}
 
 	return render(request, 'byteshop/product_detail.html', context)
