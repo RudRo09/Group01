@@ -80,9 +80,10 @@
 <p><strong>System Design</strong></p>
 <p>1. Design</p>
 <p>The whole system is divided into small modules, like registration system, log in-log out system, browse product by category, search for products, add products to cart, place order and payment system, ratings and review system with SQLite database, representing the development server.</p>
-<!-- <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/tree/main/Documentation" alt="" width="641" height="481" /></strong></p> -->
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/tree/main/Documentation/project_repor_images/red.JPG" alt="" width="641" height="481" /></strong></p>
 <p>2. System Information</p>
 <p>This system will help the seller to provide the selling service and the buyers to take that service. They are the primary users of this web-app. They can visit the website and find their preferable products. This website will be a place to connect the buyers to the sellers. Another help of this system will be rating and reviewing the products, this feature will meet what a buyer needs to connect with the seller easily. It has the following advantages</p>
+<p align="center"><strong>Figure 1: Entity Relationship Diagram System Database</strong></p>
 <ul>
   <li>User friendly interface</li>
   <li>Fast access to database</li>
