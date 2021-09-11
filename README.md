@@ -47,6 +47,48 @@
   <li>Multiple payment options flexibility.</li>
   <li>Website security measures to prevent hacking attempts.</li>
 </ul>
+
+<p><strong>Feature Details</strong></p>
+<p>I. USer/Customer:</p>
+<ul>
+  <li>Customers can browse and search for products without registering to the site or without logging in.</li>
+  <li>Customers can browse products by their category.</li>
+  <li>Customers can add or remove a product to the cart without logging in.</li>
+  <li>In order to purchase a product, the customer must log in to their account.</li>
+  <li>After placing an order, the customer must confirm their order after they completing the payment by submitting the payment_id code on the confirm order page.</li>
+  <li>If the payment is successful, the order will be placed and the customer will be sent an order confirmation mail.</li>
+  <li>Customers can check their order status on their account.</li>
+  <li>Customers can update their profile information.</li>
+  <li>Customers can also give ratings and review product, only if he/she has bought it.</li>
+</ul>
+
+<p>II. Admin:</p>
+<ul>
+  <li>Admin has to log in using their email and password.</li>
+  <li>In the admin panel, admin can see how many people are registered to the site, how many products are in stock, how many orders have been placed and some other useful things.</li>
+  <li>Admin can perform 'CRUD' operation on the products, orders, and other users.</li>
+  <li>Admin can change the status of the orders.</li>
+  <li>Admin can view the ratings and reviews of customers about the products.</li>
+</ul>
+
+<p>III. Other Features:</p>
+<ul>
+  <li>If the user tries to review any product without logging in, he/she will have to log in first.</li>
+  <li>If someone attempts to log into admin panel without authorization, the login data will be recorded in the database.</li>
+</ul>
+<p></p>
+<p><strong>System Design</strong></p>
+<p>1. Design</p>
+<p>The whole system is divided into small modules, like registration system, log in-log out system, browse product by category, search for products, add products to cart, place order and payment system, ratings and review system with SQLite database, representing the development server.</p>
+<!-- <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/tree/main/Documentation" alt="" width="641" height="481" /></strong></p> -->
+<p>2. System Information</p>
+<p>This system will help the seller to provide the selling service and the buyers to take that service. They are the primary users of this web-app. They can visit the website and find their preferable products. This website will be a place to connect the buyers to the sellers. Another help of this system will be rating and reviewing the products, this feature will meet what a buyer needs to connect with the seller easily. It has the following advantages</p>
+<ul>
+  <li>User friendly interface</li>
+  <li>Fast access to database</li>
+  <li>Category-wise product browsing and search functionality.</li>
+</ul>
+<p></p>
 <p><strong>Technology</strong></p>
 <p><em>Front-end:</em></p>
 <p>Like any other website, we will be using HTML for the structure and content of our website. Then we will apply CSS and Bootstrap to it, for styling and formatting the website. We will also use some JavaScript for the client-side interface. Our website will have a responsive web design.</p>
