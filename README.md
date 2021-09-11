@@ -100,15 +100,15 @@
 </ul>
 <p></p>
 <p><strong>Software Requirements:</strong></p>
-<p><em>Front-end:</em></p>
+<p><em><strong>Front-end:</strong></em></p>
 <p>Like any other website, we will be using HTML for the structure and content of our website. Then we will apply CSS and Bootstrap to it, for styling and formatting the website. We will also use some JavaScript for the client-side interface. Our website will have a responsive web design.</p>
-<p><em>Backend:</em></p>
+<p><em><strong>Backend:</strong></em></p>
 <p>For the backend of our website, we are using Python-based web framework Django. In the backend, we will expose a bunch of services that will be accessible via the HTTP protocol. The client/front-end then can directly call the services by sending HTTP requests.</p>
 <p></p>
 <p><strong>Project Database and Table</strong></p>
-<p><em>Database</em></p>
+<p><em><strong>Database</strong></em></p>
 <p>In the beta version of our project, we are going to use the SQLite database in the development server. In the final version, we will migrate to PostgreSQL DB.</p>
-<p><em>Database Design</em></p>
+<p><em><strong>Database Design</strong></em></p>
 <p>Database design is really critical for all types of websites. A good database does not allow any form of inconsistency and stores data in an ordered way. If a database has inconsistency, it will affect the efficiency and data integrity of the website.</p>
 <p>Database files are the key source of information into the system. It is the process of designing database files, which are the key source of information to the system. The files should be properly designed and planned for collection, accumulation, editing and retrieving the required information. </p>
 <p>The organization of data in database aims to achieve three major objectives:</p>
@@ -117,39 +117,142 @@
   <li>Data integrity</li>
   <li>Data independence</li>
 </ul>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.png" alt="" width="463" height="147" /></strong></p>
-<p align="center"><strong>Figure 1: Entity Relationship Diagram System Database</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.png" alt=""/></strong></p>
+<p align="center"><strong>Figure 2: Database Workflow in Django</strong></p>
 <p></p>
-<p><em>Database Tables</em></p>
+<p><em><strong>Database Tables</strong></em></p>
 <p><strong>Table 1. Customer/User Table</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/user_table.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 3.1: Customer/User Table</strong></p>
 <p></p>
 <p><strong>Table 2. Product Table</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/product_table.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 3.2: Product Table</strong></p>
 <p></p>
 <p><strong>Table 3. Review-Rating Table</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/ratingreview_table.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 3.3: Review-Rating Table</strong></p>
 <p></p>
 <p><strong>Table 4. Cart Table</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/cart_table.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 3.4: Cart Table</strong></p>
 <p></p>
 <p><strong>Table 5. Cart-Item Table</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/carte_items_table.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 3.5: Cart-Item Table</strong></p>
 <p></p>
 <p><strong>Table 6. Category Table</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/category_table.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 3.6: Category Table</strong></p>
 <p></p>
 <p><strong>Table 7. Order Table</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/order_table.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 3.7: Order Table</strong></p>
 <p></p>
 <p><strong>Table 8. Ordered Product Table</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/orderproduct_table.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 3.8: Ordered Product Table</strong></p>
 <p></p>
 <p><strong>Table 9. Payment Table</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/payment_table.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 3.9: Payment Table</strong></p>
+<p></p>
 <p></p>
 
+<p><strong>Project Model View</strong></p>
+<p></p>
+
+<p><strong>1. Home Page:</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/homepage.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 4: Home Page</strong></p>
+<p></p>
+
+<p><strong>2. Admin Login Page:</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/admin_login.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 5: Admin Login Page</strong></p>
+<p></p>
+
+<p><strong>3. Admin Panel:</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/admin_panel.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 6: Admin Panel</strong></p>
+<p></p>
+
+<p><strong>4. Unauthorized Login Attempts:</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/login_attempts.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 7: Unauthorized login attempts</strong></p>
+<p></p>
+
+<p><strong>5. Customer Sign Up Page:</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/sign_up.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 8: Customer Sign Up Page</strong></p>
+<p></p>
+
+<p><strong>6. Customer Login Page:</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/login.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 9: Customer Login Page</strong></p>
+<p></p>
+
+<p><strong>7. Category-wise Product Browsing</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/category.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 10: Category wise Product Browsing</strong></p>
+<p></p>
+
+<p><strong>8. Search Functionality</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/search.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 11: Search for Products</strong></p>
+<p></p>
+
+<p><strong>9. Single Product Details with Rating & Review</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/single.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 12: Single Product Details Page with Rating and Review</strong></p>
+<p></p>
+
+<p><strong>10. Cart Page</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/cart_page.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 13: Cart Page</strong></p>
+<p></p>
+
+<p><strong>11. Checkout Page</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/checkout_page.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 14: Checkout Page</strong></p>
+<p></p>
+
+<p><strong>12. Confirm Order Page</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/confirm_order.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 15: Confirm Order Page</strong></p>
+<p></p>
+
+<p><strong>13. Confirm Payment Page</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/confirm_payment.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 16: Confirm Payment Page</strong></p>
+<p></p>
+
+<p><strong>14. Order Confirmed Page</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/success.JPG" alt=""/></strong></p>
+<p align="center"><strong>Figure 17: Order Confirmed Page</strong></p>
+<p></p>
+
+<p><strong>Monetization::</strong></p>
+<ul>
+  <li>We will ask the seller to pay a commission of 5% for product sold more than 100 BDT.</li>
+  <li>Introduce affiliate marketing.</li>
+  <li>Google AdSense</li>
+</ul>
+
+<p></p>
 <p><strong>Social Impacts:</strong></p>
 <p>The goal of this website is to make shopping easier and in the palm of the user’s hand. Nowadays people of all ages are used to the modern technologies that can connect them to the internet.  And it's on the internet, where the modern era of shopping is making its mark. Everything from a hairpin to a helicopter can be purchased online these days. Products are put into the websites by sellers to be browsed or bought by customers, and the convenience of the e-commerce trend also benefits both buyers and sellers alike. Our website aims to serve as the bridge that connects the buyers and sellers to ensure fair trade.</p>
+<p></p>
+<p><strong>Future Aspect:</strong></p>
+<p>This project has a huge future potential. It can be modified to meet the needs of the future client expectations. More functionalities will be added in the future. The followings are the future targets for the project:</p>
+<ul>
+  <li>Adding the Wishlist.</li>
+  <li>Adding Payment system & gateway</li>
+  <li>Adding the Shipping form</li>
+  <li>Adding the Third party(seller) functionalities</li>
+  <li>User profile customization</li>
+  <li>Adding dashboard functionality.</li>
+
+</ul>
 <p>&nbsp;</p>
 </div>
