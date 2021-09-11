@@ -80,10 +80,10 @@
 <p><strong>System Design</strong></p>
 <p>1. Design</p>
 <p>The whole system is divided into small modules, like registration system, log in-log out system, browse product by category, search for products, add products to cart, place order and payment system, ratings and review system with SQLite database, representing the development server.</p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/tree/main/Documentation/project_repor_images/erd.JPG" alt="" width="641" height="481" /></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/erd.JPG" alt="" width="827" height="916" /></strong></p>
+<p align="center"><strong>Figure 1: Entity Relationship Diagram System Database</strong></p>
 <p>2. System Information</p>
 <p>This system will help the seller to provide the selling service and the buyers to take that service. They are the primary users of this web-app. They can visit the website and find their preferable products. This website will be a place to connect the buyers to the sellers. Another help of this system will be rating and reviewing the products, this feature will meet what a buyer needs to connect with the seller easily. It has the following advantages</p>
-<p align="center"><strong>Figure 1: Entity Relationship Diagram System Database</strong></p>
 <ul>
   <li>User friendly interface</li>
   <li>Fast access to database</li>
@@ -91,14 +91,64 @@
 </ul>
 <p></p>
 <p><strong>Technology</strong></p>
+<p><strong>Hardware Requirements:</strong></p>
+<ul>
+  <li>Processor: Pentium IV or above</li>
+  <li>Ram: 2GB or above</li>
+  <li>Hard Drive: 50GB or above</li>
+  <li>Device(s): Keyboard, Mouse, Monitor, Smartphone</li>
+</ul>
+<p></p>
+<p><strong>Software Requirements:</strong></p>
 <p><em>Front-end:</em></p>
 <p>Like any other website, we will be using HTML for the structure and content of our website. Then we will apply CSS and Bootstrap to it, for styling and formatting the website. We will also use some JavaScript for the client-side interface. Our website will have a responsive web design.</p>
 <p><em>Backend:</em></p>
 <p>For the backend of our website, we are using Python-based web framework Django. In the backend, we will expose a bunch of services that will be accessible via the HTTP protocol. The client/front-end then can directly call the services by sending HTTP requests.</p>
-<p><em>Database:</em></p>
+<p></p>
+<p><strong>Project Database and Table</strong></p>
+<p><em>Database</em></p>
 <p>In the beta version of our project, we are going to use the SQLite database in the development server. In the final version, we will migrate to PostgreSQL DB.</p>
-<p><em>Payment Method:</em></p>
-<p>For the payment method we will be using SSLCOMMERZ, which is a secure and authorized online Payment Gateway. It enables to perform secured transactions from the customer’s card, mobile wallet or bank account. But if we face any issue implementing it properly in our project, we plan to use Stripe Python library as an alternative approach. It is also a technology to accept payments online and build economic infrastructure for the internet.</p>
+<p><em>Database Design</em></p>
+<p>Database design is really critical for all types of websites. A good database does not allow any form of inconsistency and stores data in an ordered way. If a database has inconsistency, it will affect the efficiency and data integrity of the website.</p>
+<p>Database files are the key source of information into the system. It is the process of designing database files, which are the key source of information to the system. The files should be properly designed and planned for collection, accumulation, editing and retrieving the required information. </p>
+<p>The organization of data in database aims to achieve three major objectives:</p>
+<ul>
+  <li>Data integration</li>
+  <li>Data integrity</li>
+  <li>Data independence</li>
+</ul>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.png" alt="" width="463" height="147" /></strong></p>
+<p align="center"><strong>Figure 1: Entity Relationship Diagram System Database</strong></p>
+<p></p>
+<p><em>Database Tables</em></p>
+<p><strong>Table 1. Customer/User Table</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.user_table.JPG" alt=""/></strong></p>
+<p></p>
+<p><strong>Table 2. Product Table</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.product_table.JPG" alt=""/></strong></p>
+<p></p>
+<p><strong>Table 3. Review-Rating Table</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.ratingreview_table.JPG" alt=""/></strong></p>
+<p></p>
+<p><strong>Table 4. Cart Table</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.cart_table.JPG" alt=""/></strong></p>
+<p></p>
+<p><strong>Table 5. Cart-Item Table</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.carte_items_table.JPG" alt=""/></strong></p>
+<p></p>
+<p><strong>Table 6. Category Table</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.category_table.JPG" alt=""/></strong></p>
+<p></p>
+<p><strong>Table 7. Order Table</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.order_table.JPG" alt=""/></strong></p>
+<p></p>
+<p><strong>Table 8. Ordered Product Table</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.orderproduct_table.JPG" alt=""/></strong></p>
+<p></p>
+<p><strong>Table 9. Payment Table</strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.payment_table.JPG" alt=""/></strong></p>
+<p></p>
+
 <p><strong>Social Impacts:</strong></p>
 <p>The goal of this website is to make shopping easier and in the palm of the user’s hand. Nowadays people of all ages are used to the modern technologies that can connect them to the internet.  And it's on the internet, where the modern era of shopping is making its mark. Everything from a hairpin to a helicopter can be purchased online these days. Products are put into the websites by sellers to be browsed or bought by customers, and the convenience of the e-commerce trend also benefits both buyers and sellers alike. Our website aims to serve as the bridge that connects the buyers and sellers to ensure fair trade.</p>
 <p>&nbsp;</p>
