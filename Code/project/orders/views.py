@@ -5,10 +5,11 @@ from .forms import OrderForm, PaymentForm
 from .models import Order, Payment, OrderProduct
 from byteshop.models import Product
 from django.contrib import messages
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
 
 import datetime
 import random
-import json
 
 
 # Create your views here.
@@ -123,6 +124,16 @@ def confirm_order(request):
 				CartItem.objects.filter(user=current_user).delete()
 
 				# send order confirmation mail
+				mail_subject = 'Order Confirmed!'
+				message = render_to_string('orders/order_recieved_email.html', {
+				 	'user': request.user,
+				 	'order': order,
+				 	})
+				
+				email_to = request.user.email
+				send_email = EmailMessage(mail_subject, message, to=[email_to])
+				send_email.send()
+
 
 				# context
 				ordered_products = OrderProduct.objects.filter(order_id=order.id)
