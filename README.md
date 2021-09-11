@@ -122,31 +122,31 @@
 <p></p>
 <p><em>Database Tables</em></p>
 <p><strong>Table 1. Customer/User Table</strong></p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.user_table.JPG" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/user_table.JPG" alt=""/></strong></p>
 <p></p>
 <p><strong>Table 2. Product Table</strong></p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.product_table.JPG" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/product_table.JPG" alt=""/></strong></p>
 <p></p>
 <p><strong>Table 3. Review-Rating Table</strong></p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.ratingreview_table.JPG" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/ratingreview_table.JPG" alt=""/></strong></p>
 <p></p>
 <p><strong>Table 4. Cart Table</strong></p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.cart_table.JPG" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/cart_table.JPG" alt=""/></strong></p>
 <p></p>
 <p><strong>Table 5. Cart-Item Table</strong></p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.carte_items_table.JPG" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/carte_items_table.JPG" alt=""/></strong></p>
 <p></p>
 <p><strong>Table 6. Category Table</strong></p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.category_table.JPG" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/category_table.JPG" alt=""/></strong></p>
 <p></p>
 <p><strong>Table 7. Order Table</strong></p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.order_table.JPG" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/order_table.JPG" alt=""/></strong></p>
 <p></p>
 <p><strong>Table 8. Ordered Product Table</strong></p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.orderproduct_table.JPG" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/orderproduct_table.JPG" alt=""/></strong></p>
 <p></p>
 <p><strong>Table 9. Payment Table</strong></p>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.payment_table.JPG" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/payment_table.JPG" alt=""/></strong></p>
 <p></p>
 
 <p><strong>Social Impacts:</strong></p>
