@@ -3,7 +3,7 @@
 <p align="center"><strong><img src="https://media.dhakatribune.com/uploads/2016/11/nsulogo.jpg" alt="" width="307" height="172" /></strong></p>
 <p align="center"><strong>North South University</strong></p>
 <p align="center">Department of Electrical &amp; Computer Engineering</p>
-<p align="center"><strong>Project Proposal</strong></p>
+<p align="center"><strong>Project Report</strong></p>
 <p align="center"><strong>Group No</strong>: 01</p>
 <p align="center"><strong>Summer 2021</strong></p>
 <p align="center"><strong>Project Name</strong>: E-commerce Website on Tech Gadgets</p>
@@ -22,7 +22,7 @@
 <p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1822132</p>
 <p align="center"><strong>Email</strong><strong>:</strong> <a href="mailto:shadmanul.islam@northsouth.edu">shadmanul.islam@northsouth.edu</a></p>
 <p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-SU21-CSE299-6/Group01.git/">https://github.com/NSU-SU21-CSE299-6/Group01.git/</a></p>
-<p align="center"><strong>Date Prepared</strong><strong>: </strong>27/06/2021</p>
+<p align="center"><strong>Date Prepared</strong><strong>: </strong>11/09/2021</p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
 <div align="justify">
@@ -117,7 +117,7 @@
   <li>Data integrity</li>
   <li>Data independence</li>
 </ul>
-<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.png" alt=""/></strong></p>
+<p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/database_workflow.png" alt="" width="500" height="500"/></strong></p>
 <p align="center"><strong>Figure 2: Database Workflow in Django</strong></p>
 <p></p>
 <p><em><strong>Database Tables</strong></em></p>
@@ -158,7 +158,7 @@
 <p align="center"><strong>Figure 3.9: Payment Table</strong></p>
 <p></p>
 <p></p>
-
+<p></p>
 <p><strong>Project Model View</strong></p>
 <p></p>
 
@@ -166,73 +166,88 @@
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/homepage.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 4: Home Page</strong></p>
 <p></p>
+<p></p>
 
 <p><strong>2. Admin Login Page:</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/admin_login.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 5: Admin Login Page</strong></p>
+<p></p>
 <p></p>
 
 <p><strong>3. Admin Panel:</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/admin_panel.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 6: Admin Panel</strong></p>
 <p></p>
+<p></p>
 
 <p><strong>4. Unauthorized Login Attempts:</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/login_attempts.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 7: Unauthorized login attempts</strong></p>
+<p></p>
 <p></p>
 
 <p><strong>5. Customer Sign Up Page:</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/sign_up.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 8: Customer Sign Up Page</strong></p>
 <p></p>
+<p></p>
 
 <p><strong>6. Customer Login Page:</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/login.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 9: Customer Login Page</strong></p>
+<p></p>
 <p></p>
 
 <p><strong>7. Category-wise Product Browsing</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/category.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 10: Category wise Product Browsing</strong></p>
 <p></p>
+<p></p>
 
 <p><strong>8. Search Functionality</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/search.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 11: Search for Products</strong></p>
+<p></p>
 <p></p>
 
 <p><strong>9. Single Product Details with Rating & Review</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/single.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 12: Single Product Details Page with Rating and Review</strong></p>
 <p></p>
+<p></p>
 
 <p><strong>10. Cart Page</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/cart_page.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 13: Cart Page</strong></p>
+<p></p>
 <p></p>
 
 <p><strong>11. Checkout Page</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/checkout_page.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 14: Checkout Page</strong></p>
 <p></p>
+<p></p>
 
 <p><strong>12. Confirm Order Page</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/confirm_order.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 15: Confirm Order Page</strong></p>
+<p></p>
 <p></p>
 
 <p><strong>13. Confirm Payment Page</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/confirm_payment.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 16: Confirm Payment Page</strong></p>
 <p></p>
+<p></p>
 
 <p><strong>14. Order Confirmed Page</strong></p>
 <p align="center"><strong><img src="https://github.com/NSU-SU21-CSE299-6/Group01/blob/main/Documentation/project_report_images/success.JPG" alt=""/></strong></p>
 <p align="center"><strong>Figure 17: Order Confirmed Page</strong></p>
 <p></p>
+<p></p>
+<p></p>
 
-<p><strong>Monetization::</strong></p>
+<p><strong>Monetization:</strong></p>
 <ul>
   <li>We will ask the seller to pay a commission of 5% for product sold more than 100 BDT.</li>
   <li>Introduce affiliate marketing.</li>
